@@ -288,12 +288,18 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  padding: 8px 4px;
+  padding: 8px 16px;
   border: 0;
   color: var(--text);
   background: transparent;
   cursor: pointer;
   font-weight: 700;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+}
+
+@media (max-width: 60rem) {
+  .home-search__trigger {border: none;}
 }
 
 .home-search__trigger svg,
@@ -909,6 +915,21 @@ body:has(.home-search[data-open="true"]) {
   background-color: #f3eeec;
 }
 
+
+
+@media (max-width: 60rem) {
+  .home-search {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+}
+
+.home-search svg {
+  width: 32px;
+  height: 32px;
+}
+
 .home-hero__books img {
   width: min(650px, 100%);
   height: auto;
@@ -1065,6 +1086,7 @@ body:has(.home-search[data-open="true"]) {
     overflow: hidden;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
+    
   }
 
   .home-search__bar {
